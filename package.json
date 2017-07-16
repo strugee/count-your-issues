@@ -1,0 +1,24 @@
+{
+  "name": "count-your-issues",
+  "version": "1.0.0",
+  "description": "Try to find out how many issues/bugs you've filed, ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strugee/count-your-issues.git"
+  },
+  "keywords": [
+    "count",
+    "issues",
+    "fun"
+  ],
+  "author": "AJ Jordan <alex@strugee.net>",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/strugee/count-your-issues/issues"
+  },
+  "homepage": "https://github.com/strugee/count-your-issues#readme"
+}
