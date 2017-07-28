@@ -45,4 +45,4 @@ config.map(async function execDirective(directive) {
 
 	return result;
 }).reduce((a, b) => a + b)
-  .then((total => console.log('Total: ' + total)));
+  .then(total => console.log('Total: ' + total));
