@@ -54,6 +54,31 @@ You can also override what GitLab instance `count-your-issues` connects to with 
 
 Note that the protocol (probably `https://`) is required.
 
+### `bugzilla`
+
+Queries Bugzilla instances, by default `bugzilla.mozilla.org`. Bugzilla must be new enough to have either REST API support or JSON-RPC support. At least Bugzilla 4.4+ meets this requirement, and possibly older Bugzillas, too.
+
+Takes a `email` parameter which is, well, your email that you use to login to Bugzilla.
+
+```json
+{
+  "type": "bugzilla",
+  "email": "alice@example.net"
+}
+```
+
+You can also override what Bugzilla instance `count-your-issues` connects to with the `instance` parameter. For example:
+
+```json
+{
+  "type": "bugzilla",
+  "instance": "https://bugzilla.example.com",
+  "email": "alice@example.net"
+}
+```
+
+Note that the protocol (probably `https://`) is required.
+
 ## License
 
 GNU GPL 3.0 or later
