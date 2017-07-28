@@ -40,5 +40,8 @@ config.map(async function execDirective(directive) {
 	// It's also okay to blindly require() user input because they wrote the config
 	const provider = require(`./lib/${directive.type}`);
 
-	return provider(directive);
+	const result = await provider.invoke(directive);
+	console.log(provider.name + ': ' + result);
+
+	return result;
 });
