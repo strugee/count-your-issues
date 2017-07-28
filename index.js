@@ -44,4 +44,5 @@ config.map(async function execDirective(directive) {
 	console.log(provider.name + ': ' + result);
 
 	return result;
-});
+}).reduce((a, b) => a + b)
+  .then((total => console.log('Total: ' + total)));
