@@ -41,8 +41,8 @@ const jobs = config.map(async function execDirective(directive) {
 	// It's also okay to blindly require() user input because they wrote the config
 	const provider = require(`./lib/${directive.type}`);
 
-	const result = await provider.invoke(directive);
-	console.log(provider.name + ': ' + result);
+	const [result, name] = await provider.invoke(directive);
+	console.log(name + ': ' + result);
 
 	return result;
 });
