@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/strugee/count-your-issues/issues"
   },
-  "homepage": "https://github.com/strugee/count-your-issues#readme"
+  "homepage": "https://github.com/strugee/count-your-issues#readme",
+  "dependencies": {
+    "always-promise": "^1.1.1",
+    "http-promises": "^1.2.2",
+    "promise-from-stream": "^0.2.6",
+    "stream-to-promise": "^2.2.0"
+  }
 }
