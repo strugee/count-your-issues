@@ -25,7 +25,8 @@ along with count-your-issues. If not, see
 'use strict';
 
 const assert = require('assert'),
-      path = require('path');
+      path = require('path'),
+      pReduce = require('p-reduce');
 
 assert(process.argv[2], 'no config provided');
 
@@ -33,7 +34,7 @@ const config = require(path.resolve(process.argv[2]));
 
 assert(Array.isArray(config), 'configuration isn\'t a single array');
 
-config.map(async function execDirective(directive) {
+const jobs = config.map(async function execDirective(directive) {
 	assert(directive.type, 'directive has no type');
 
 	// It's okay to do this in a loop because require() caches paths
@@ -44,5 +45,8 @@ config.map(async function execDirective(directive) {
 	console.log(provider.name + ': ' + result);
 
 	return result;
-}).reduce((a, b) => a + b)
-  .then(total => console.log('Total: ' + total));
+});
+
+pReduce(jobs, (a, b) => a + b, 0)
+.then(total => console.log('Total: ' + total));
+
