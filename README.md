@@ -8,9 +8,9 @@ Try to find out how many issues/bugs you've filed, ever
 
     % count-your-issues config.json
 
-The JSON config file is expected to be a single array of objects describing where to look for issues. Each object has a `type` key, which specifies the provider to use. The rest of the object keys are options for the provider.
+The JSON config file is expected to be a single array of objects describing where to look for issues. Each object has a `type` key, which specifies the provider to use. The rest of the object keys are options for the provider. You can specify as many providers as you want, including specifying providers more than once.
 
-You can specify as many providers as you want, including specifying providers more than once.
+If you need an example, you can check out my personal configuration at [this Gist](https://gist.github.com/strugee/302f52fc30c38c4c0dc01a116497cd22).
 
 ## Provider config
 
