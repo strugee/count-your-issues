@@ -79,6 +79,17 @@ You can also override what Bugzilla instance `count-your-issues` connects to wit
 
 Note that the protocol (probably `https://`) is required.
 
+### `launchpad`
+
+Queries [Launchpad.net](https://launchpad.net/). All you need is your username. Example:
+
+```json
+{
+  "type": "launchpad",
+  "username": "alice"
+}
+```
+
 ## License
 
 GNU GPL 3.0 or later
