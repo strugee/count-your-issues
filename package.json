@@ -23,7 +23,7 @@
   "homepage": "https://github.com/strugee/count-your-issues#readme",
   "dependencies": {
     "http-promises": "^1.2.2",
-    "jsdom": "^16.4.0",
+    "jsdom": "^16.6.0",
     "p-reduce": "^2.1.0"
   },
   "engines": {
